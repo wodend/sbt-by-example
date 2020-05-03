@@ -34,6 +34,8 @@ sbt test
 
 ## Deployment
 
+### Compression
+
 Deploy the package as a .zip using sbt.
 
 ```bash
@@ -48,7 +50,7 @@ unzip -o -d /tmp/sbt-by-example/ target/universal/sbt-by-example-[version].zip
 /tmp/sbt-by-example/sbt-by-example-[version]/bin/sbt-by-example
 ```
 
-### Optional
+### Docker
 
 Deploy the package with [Docker](https://docs.docker.com/get-docker/) using
 sbt.
