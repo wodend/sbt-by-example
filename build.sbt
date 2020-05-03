@@ -4,6 +4,7 @@ ThisBuild / organization := "cc.estoff"
 val scalaTest = "org.scalatest" %% "scalatest" % "3.0.5"
 
 lazy val hello = (project in file("."))
+  .aggregate(helloCore)
   .settings(
     name := "Hello",
     libraryDependencies += "com.typesafe.play" %% "play-json" % "2.6.9",
