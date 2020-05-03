@@ -32,6 +32,37 @@ sbt compile
 sbt test
 ```
 
+## Deployment
+
+Deploy the package as a .zip using sbt.
+
+```bash
+sbt dist
+```
+
+Run version `[version]` of the packaged application.
+
+```bash
+mkdir /tmp/sbt-by-example
+unzip -o -d /tmp/sbt-by-example/ target/universal/sbt-by-example-[version].zip
+/tmp/sbt-by-example/sbt-by-example-[version]/bin/sbt-by-example
+```
+
+*Optional*:
+
+Deploy the package with [Docker](https://docs.docker.com/get-docker/) using
+sbt.
+
+```bash
+sbt Docker/publishLocal
+```
+
+Run version `[version]` of the dockerized application.
+
+```bash
+docker run sbt-by-example:[version]
+```
+
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to
 discuss what you would like to change.
